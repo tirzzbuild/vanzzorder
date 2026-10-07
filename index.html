@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NOKOS STORE — Order Nomor Virtual Cepat & Mudah</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#06080c;--bg2:#0d121b;--card:rgba(255,255,255,.045);--bd:rgba(255,255,255,.1);--tx:#e8eef6;--mu:#8b97a8;--g:#19f59b;--b:#2f7bff;--er:#ff5a6a;--wa:#25d366;--gl:rgba(25,245,155,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#f2f6fb;--bg2:#fff;--card:rgba(255,255,255,.75);--bd:rgba(10,20,40,.12);--tx:#0b1220;--mu:#566275;--g:#00a86b;--b:#1f5fe0;--gl:rgba(0,168,107,.25)}
+html{scroll-padding-top:calc(110px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(900px 500px at 80% -10%,rgba(47,123,255,.18),transparent),radial-gradient(700px 400px at 0% 10%,rgba(25,245,155,.12),transparent),var(--bg);color:var(--tx);font:15px/1.6 Inter,Poppins,system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}.mu{color:var(--mu)}.sm{font-size:12px}
+.wrap{max-width:1080px;margin:auto;padding:0 18px}
+.glass{background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--bd);border-radius:18px;transition:.25s}
+.glass:hover{border-color:var(--g);box-shadow:0 0 28px var(--gl);transform:translateY(-3px)}
+.btn{font:600 14px Inter,sans-serif;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:12px 20px;border-radius:12px;cursor:pointer;transition:.2s;position:relative;display:inline-flex;gap:8px;align-items:center;justify-content:center}
+.btn:hover{border-color:var(--g);box-shadow:0 0 20px var(--gl);transform:translateY(-1px)}.btn:active{transform:scale(.96)}
+.btn.pri{background:linear-gradient(135deg,var(--g),var(--b));color:#04110b;border:0}.btn.wa{background:var(--wa);color:#04110b;border:0}
+.btn:disabled{opacity:.7;cursor:wait}.btn.load::after{content:"";width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+.btn.flash{animation:fl .6s}@keyframes fl{50%{box-shadow:0 0 30px var(--g)}}@keyframes sp{to{transform:rotate(360deg)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 18px;max-width:1080px;margin:auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}.logo svg{width:34px;height:34px;filter:drop-shadow(0 0 8px var(--gl))}
+.links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.links a{padding:8px 12px;border-radius:10px;white-space:nowrap;color:var(--mu);font-weight:500;transition:.2s}.links a:hover,.links a.on{color:var(--tx);background:var(--card)}
+.pill{font-size:11px;font-weight:700;padding:5px 10px;border-radius:99px;border:1px solid var(--bd);color:var(--mu)}.pill.on{color:var(--g);border-color:var(--g)}.pill.off{color:var(--er);border-color:var(--er)}
+.ib{width:38px;height:38px;padding:0}
+@media(max-width:760px){.links{order:3;width:100%;margin:0}}
+.hero{padding:72px 0 36px;text-align:center}
+.hero h1{font-size:clamp(34px,8vw,68px);line-height:1.05;margin:14px 0;font-weight:800;background:linear-gradient(120deg,var(--tx),var(--g) 60%,var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:520px;margin:0 auto 26px;color:var(--mu);font-size:17px}.badge{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--g);font-weight:700}
+.row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:38px 0}.stat{padding:18px;text-align:center}.stat b{display:block;font-size:20px;color:var(--g)}
+section{padding:34px 0}h2{font-size:26px;margin:0 0 6px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+input,select{width:100%;background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;font:inherit;outline:0;transition:.2s}input:focus,select:focus{border-color:var(--g);box-shadow:0 0 0 3px var(--gl)}
+.tools input{flex:1;min-width:200px}.chip{padding:10px 16px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--mu);cursor:pointer;font:600 13px Inter;transition:.2s}.chip.on,.chip:hover{color:var(--g);border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{padding:22px;display:flex;flex-direction:column;gap:8px}.card h3{margin:4px 0 0}.card p{margin:0}.ic{font-size:30px}.pr b{color:var(--g);font-size:20px}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;border:1px solid var(--g);color:var(--g)}.tag.sample{border-color:var(--bd);color:var(--mu)}
+.card .btn{margin-top:8px}
+details{padding:16px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:600}details p{color:var(--mu);margin:10px 0 0}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+.box{padding:24px;margin:18px 0}.box:hover{transform:none}
+.badge-s{display:inline-block;padding:4px 12px;border-radius:99px;background:rgba(47,123,255,.15);color:var(--b);font-weight:700;font-size:12px}.badge-s.paid{background:rgba(25,245,155,.15);color:var(--g)}
+.qr{aspect-ratio:1;max-width:240px;margin:16px auto;border:2px dashed var(--bd);border-radius:16px;display:grid;place-items:center;text-align:center;padding:14px;color:var(--mu);font-size:13px;overflow:hidden}.qr img{width:100%;height:100%;object-fit:contain;background:#fff}
+.cd{font-size:34px;font-weight:800;color:var(--g);text-align:center;font-variant-numeric:tabular-nums}
+.md{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px;overflow:auto}.md[hidden],[hidden]{display:none!important}
+.md .box{width:100%;max-width:440px;margin:auto;position:relative;background:var(--bg2);animation:pop .25s}@keyframes pop{from{opacity:0;transform:scale(.95)}}
+.x{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--bd);background:0;color:var(--tx);cursor:pointer}
+label{display:block;font-size:13px;color:var(--mu);margin:12px 0 4px}.tot{display:flex;justify-content:space-between;margin:16px 0 4px;font-size:18px}.tot b{color:var(--g)}
+.err{color:var(--er);font-size:13px;margin:8px 0}.note{font-size:13px;padding:10px 12px;border-radius:12px;border:1px solid var(--bd);color:var(--mu);margin:12px 0}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--bd)}
+#toasts{position:fixed;top:calc(80px + env(safe-area-inset-top,0px));right:14px;z-index:70;display:grid;gap:8px;max-width:calc(100vw - 28px)}
+.toast{padding:12px 16px;border-radius:12px;background:var(--bg2);border:1px solid var(--bd);border-left:4px solid var(--b);animation:pop .25s;box-shadow:0 8px 30px rgba(0,0,0,.4)}.toast.ok{border-left-color:var(--g)}.toast.err{border-left-color:var(--er)}
+.fab{position:fixed;right:16px;width:50px;height:50px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;font-size:22px;z-index:20;transition:.2s}.fab:hover{transform:scale(1.1)}
+#wa{bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--wa);box-shadow:0 0 22px rgba(37,211,102,.45)}
+#up{bottom:calc(78px + env(safe-area-inset-bottom,0px));background:var(--card);border:1px solid var(--bd);color:var(--tx);opacity:0;pointer-events:none}#up.show{opacity:1;pointer-events:auto}
+#ld{position:fixed;inset:0;background:var(--bg);z-index:99;display:grid;place-items:center;transition:opacity .5s}#ld.out{opacity:0;pointer-events:none}#ld i{width:44px;height:44px;border:3px solid var(--bd);border-top-color:var(--g);border-radius:50%;animation:sp .8s linear infinite}
+footer{border-top:1px solid var(--bd);padding:26px 0 90px;text-align:center;color:var(--mu);font-size:13px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="ld"><i></i></div>
+<header><div class="nav">
+ <a href="#home" class="logo"><svg viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19f59b"/><stop offset="1" stop-color="#2f7bff"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M9 23V9l14 14V9" stroke="#06080c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>NOKOS STORE</a>
+ <span class="pill" id="st">CEK STATUS…</span>
+ <button class="btn ib" id="th" aria-label="Ganti tema">🌙</button>
+ <nav class="links"><a href="#home">🏠 Home</a><a href="#produk">🛒 Produk</a><a href="#pesanan">📦 Pesanan</a><a href="#pembayaran">💳 Pembayaran</a><a href="#kontak">💬 Kontak</a><a href="#login">👤 Login</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="view" id="v-home">
+ <div class="hero rv" id="home"><span class="badge">ORDER NOMOR VIRTUAL CEPAT &amp; MUDAH</span><h1>ORDER NOMOR KOSONG</h1><p>Nomor virtual untuk berbagai kebutuhan, proses cepat dan praktis.</p>
+  <div class="row"><button class="btn pri" id="h1">🛒 ORDER SEKARANG</button><button class="btn" id="h2">💬 HUBUNGI ADMIN</button></div></div>
+ <div class="stats rv" id="stats"></div>
+ <section id="produk"><h2>Produk</h2><span class="mu">Pilih produk, lalu tekan ORDER.</span>
+  <div class="tools"><input id="q" placeholder="🔎 Cari produk…" aria-label="Cari produk"><span id="chips"></span></div><div class="grid" id="grid"></div></section>
+ <section id="testimoni"><h2>Testimoni</h2><div class="grid" id="tst"></div></section>
+ <section id="faq"><h2>FAQ</h2><div id="faqs"></div></section>
+ <section id="kontak"><h2>Kontak</h2><div class="glass box"><p class="mu">Butuh bantuan sebelum order? Chat admin lewat WhatsApp.</p><button class="btn wa" id="k1">💬 Chat Admin WhatsApp</button></div></section>
+</div>
+
+<div class="view" id="v-pesanan" hidden><section><h2>📦 Pesanan</h2>
+ <div class="tools"><input id="oid" placeholder="Masukkan ID pesanan"><button class="btn pri" id="ob">CEK PESANAN</button></div><div id="ol"></div></section></div>
+
+<div class="view" id="v-bayar" hidden><section><h2>💳 Pembayaran</h2><div id="pay"></div></section></div>
+
+<div class="view" id="v-login" hidden><section><h2>👤 Login</h2><div class="glass box" style="max-width:420px">
+ <label>Email</label><input id="le" type="email" autocomplete="username"><label>Password</label><input id="lp" type="password" autocomplete="current-password">
+ <div class="err" id="lerr" hidden></div><button class="btn pri" id="lb" style="width:100%;margin-top:16px">MASUK</button></div></section></div>
+</main>
+
+<footer>© NOKOS STORE — Order nomor virtual cepat &amp; mudah</footer>
+
+<div class="md" id="md" hidden><div class="glass box">
+ <button class="x" id="mx" aria-label="Tutup">✕</button>
+ <form id="of" novalidate><h3 style="margin:0">Buat Pesanan</h3>
+  <label>Produk</label><select id="fp"></select><label>Negara</label><select id="fc"></select><label>Layanan</label><select id="fs"></select>
+  <label>Jumlah (1–10)</label><input id="fq" type="number" min="1" max="10" value="1"><label>Nomor WhatsApp</label><input id="fw" inputmode="tel" placeholder="6281234567890">
+  <label>Metode pembayaran</label><select id="fm"><option>QRIS</option></select>
+  <div class="tot"><span>Total</span><b id="ft"></b></div><div class="mu sm">Harga final dikonfirmasi server saat pesanan dibuat.</div>
+  <div class="err" id="fe" hidden></div><button class="btn pri" id="fb" type="submit" style="width:100%;margin-top:14px">KONFIRMASI ORDER</button></form>
+ <div id="done" hidden></div></div></div>
+
+<div id="toasts"></div>
+<button class="fab" id="wa" aria-label="WhatsApp admin">💬</button><button class="fab" id="up" aria-label="Kembali ke atas">↑</button>
+
+<script>
+/* ===== KONFIGURASI =====
+   API_BASE kosong = mode lokal (tanpa backend). Isi dengan URL API same-origin, mis. "/api".
+   Kontrak API yang diharapkan (semua JSON, data sensitif & kredensial HANYA di server/env):
+   POST /orders {product,country,service,qty,wa,method} -> {id,status,status_label,total,expires_at(ms),qris_image(data URI)}
+   GET  /orders/:id | GET /payments/:id/status -> {status:'pending'|'paid'|'expired'|'failed', status_label}
+   POST /auth/login {email,password} (set cookie httpOnly) | GET /status -> {online:boolean}
+   Status "paid" HANYA boleh datang dari server (webhook payment gateway). */
+const CONFIG={API_BASE:'',ADMIN_WA:'',ADMIN_URL:'/admin',
+ stats:[['1000+','Pesanan'],['Proses','Cepat'],['Support','Admin'],['Pembayaran','Aman']]};
+const PRODUCTS=[
+ {id:'virtual',name:'Nomor Virtual',desc:'Nomor virtual untuk berbagai kebutuhan verifikasi.',price:5000,cat:'virtual',icon:'📱',status:'Tersedia'},
+ {id:'premium',name:'Nomor Premium',desc:'Nomor kualitas lebih tinggi dengan prioritas proses.',price:10000,cat:'premium',icon:'💎',status:'Tersedia'},
+ {id:'otp',name:'Nomor OTP',desc:'Nomor untuk menerima kode OTP satu kali pakai.',price:5000,cat:'otp',icon:'🔐',status:'Tersedia'}];
+const COUNTRIES=['Indonesia','Malaysia','Amerika Serikat','Inggris','Thailand'];
+const SERVICES=['WhatsApp','Telegram','Instagram','Google','Facebook','Lainnya'];
+const TESTI=[['Rizky','Prosesnya mudah dan jelas.'],['Dina','Admin responsif saat saya bertanya.'],['Andi','Tampilan nyaman dipakai di HP.']]; /* CONTOH: ganti dengan testimoni asli pelanggan */
+const FAQ=[['Bagaimana cara order?','Pilih produk, isi form, konfirmasi, lalu bayar lewat QRIS.'],['Kapan pesanan dianggap berhasil?','Setelah server memverifikasi pembayaran. Status tidak diubah manual dari halaman ini.'],['Bagaimana jika ada kendala?','Hubungi admin lewat tombol WhatsApp dengan menyertakan ID pesanan.'],['Apakah semua layanan tersedia di semua negara?','Ketersediaan bergantung pada negara dan layanan yang dipilih saat order.']];
+
+/* ===== UTIL ===== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rp=n=>'Rp'+Number(n).toLocaleString('id-ID');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store={get(){try{return JSON.parse(localStorage.getItem('nk_orders')||'[]')}catch(e){return[]}},set(a){try{localStorage.setItem('nk_orders',JSON.stringify(a))}catch(e){}}};
+const save=o=>{store.set([o,...store.get().filter(x=>x.id!==o.id)].slice(0,30))};
+function toast(m,t='info'){const e=document.createElement('div');e.className='toast '+t;e.textContent=m;$('#toasts').append(e);setTimeout(()=>e.remove(),4200)}
+async function busy(b,fn){b.disabled=true;b.classList.add('load');try{await fn()}finally{b.disabled=false;b.classList.remove('load');b.classList.add('flash');setTimeout(()=>b.classList.remove('flash'),600)}}
+function waAdmin(msg){if(!CONFIG.ADMIN_WA)return toast('Nomor WhatsApp admin belum diatur (CONFIG.ADMIN_WA).','err');window.open('https://wa.me/'+CONFIG.ADMIN_WA+'?text='+encodeURIComponent(msg||'Halo admin NOKOS STORE'),'_blank','noopener')}
+const orderMsg=o=>`Halo admin, saya ingin order.\nID: ${o.id}\nProduk: ${o.productName}\nNegara/Layanan: ${o.country}/${o.service}\nJumlah: ${o.qty}\nTotal: ${rp(o.total)}`;
+
+/* ===== API ADAPTER ===== */
+const api={async req(p,o={}){if(!CONFIG.API_BASE)throw new Error('NO_BACKEND');const r=await fetch(CONFIG.API_BASE+p,{credentials:'include',headers:{'Content-Type':'application/json'},...o});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.message||'Permintaan gagal ('+r.status+')');return d},
+ createOrder:b=>api.req('/orders',{method:'POST',body:JSON.stringify(b)}),getOrder:i=>api.req('/orders/'+encodeURIComponent(i)),
+ payStatus:i=>api.req('/payments/'+encodeURIComponent(i)+'/status'),login:b=>api.req('/auth/login',{method:'POST',body:JSON.stringify(b)}),status:()=>api.req('/status')};
+
+/* ===== TEMA & ROUTER ===== */
+const setTheme=t=>{document.documentElement.dataset.theme=t;$('#th').textContent=t==='light'?'☀️':'🌙';try{localStorage.setItem('nk_theme',t)}catch(e){}};
+let th='dark';try{th=localStorage.getItem('nk_theme')||'dark'}catch(e){}setTheme(th);
+$('#th').onclick=()=>setTheme(document.documentElement.dataset.theme==='light'?'dark':'light');
+const VIEWS={pesanan:'pesanan',pembayaran:'bayar',login:'login'};
+function route(){const h=location.hash.slice(1)||'home',v=VIEWS[h]||'home';$$('.view').forEach(x=>x.hidden=x.id!=='v-'+v);$$('.links a').forEach(a=>a.classList.toggle('on',a.hash==='#'+h));
+ if(v==='home'&&h!=='home')setTimeout(()=>document.getElementById(h)?.scrollIntoView({behavior:'smooth'}),40);else window.scrollTo(0,0);
+ if(v==='pesanan')renderOrders();if(v==='bayar')renderPay();observe()}
+addEventListener('hashchange',route);
+
+/* ===== HOME ===== */
+$('#stats').innerHTML=CONFIG.stats.map(s=>`<div class="glass stat"><b>${s[0]}</b>${s[1]}</div>`).join('');
+$('#tst').innerHTML=TESTI.map(t=>`<div class="glass card rv"><p>“${t[1]}”</p><b>${t[0]}</b><span class="tag sample">contoh</span></div>`).join('');
+$('#faqs').innerHTML=FAQ.map(f=>`<details class="glass"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+let cat='all',q='';
+$('#chips').innerHTML=[['all','Semua'],['virtual','Virtual'],['premium','Premium'],['otp','OTP']].map(c=>`<button class="chip${c[0]==='all'?' on':''}" data-c="${c[0]}">${c[1]}</button>`).join(' ');
+function renderProducts(){const l=PRODUCTS.filter(p=>(cat==='all'||p.cat===cat)&&(p.name+p.desc).toLowerCase().includes(q));
+ $('#grid').innerHTML=l.map(p=>`<article class="glass card"><div class="ic">${p.icon}</div><h3>${p.name}</h3><p class="mu">${p.desc}</p><div class="pr">Mulai dari <b>${rp(p.price)}</b></div><span class="tag">${p.status}</span><button class="btn pri" data-order="${p.id}">ORDER</button></article>`).join('')||'<p class="mu">Produk tidak ditemukan.</p>'}
+$('#q').oninput=e=>{q=e.target.value.toLowerCase().trim();renderProducts()};
+$('#chips').onclick=e=>{const c=e.target.dataset.c;if(!c)return;cat=c;$$('.chip').forEach(x=>x.classList.toggle('on',x.dataset.c===c));renderProducts()};
+$('#h1').onclick=()=>{location.hash='#produk'};$('#h2').onclick=()=>waAdmin();$('#k1').onclick=()=>waAdmin();$('#wa').onclick=()=>waAdmin();
+$('#up').onclick=()=>scrollTo({top:0,behavior:'smooth'});addEventListener('scroll',()=>$('#up').classList.toggle('show',scrollY>500),{passive:true});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-order]');if(b)openOrder(b.dataset.order)});
+
+/* ===== ORDER ===== */
+const fill=(el,a)=>el.innerHTML=a.map(x=>`<option>${x}</option>`).join('');
+$('#fp').innerHTML=PRODUCTS.map(p=>`<option value="${p.id}">${p.name}</option>`).join('');fill($('#fc'),COUNTRIES);fill($('#fs'),SERVICES);
+const prod=()=>PRODUCTS.find(p=>p.id===$('#fp').value);
+const total=()=>{const q=Math.max(1,Math.min(10,+$('#fq').value||1));$('#ft').textContent=rp(prod().price*q);return prod().price*q};
+['fp','fq'].forEach(i=>$('#'+i).oninput=total);
+function openOrder(id){$('#fp').value=id;$('#of').hidden=false;$('#done').hidden=true;$('#fe').hidden=true;total();$('#md').hidden=false;document.body.style.overflow='hidden'}
+function closeOrder(){$('#md').hidden=true;document.body.style.overflow=''}
+$('#mx').onclick=closeOrder;$('#md').onclick=e=>{if(e.target.id==='md')closeOrder()};addEventListener('keydown',e=>{if(e.key==='Escape')closeOrder()});
+const ferr=m=>{$('#fe').textContent=m;$('#fe').hidden=false};
+const normWA=s=>{s=s.replace(/\D/g,'');return s.startsWith('0')?'62'+s.slice(1):s};
+$('#of').onsubmit=async e=>{e.preventDefault();$('#fe').hidden=true;const p=prod(),qty=+$('#fq').value,wa=normWA($('#fw').value);
+ if(!(qty>=1&&qty<=10))return ferr('Jumlah harus 1–10.');if(!/^62\d{8,13}$/.test(wa))return ferr('Nomor WhatsApp tidak valid. Contoh: 6281234567890');
+ const body={product:p.id,country:$('#fc').value,service:$('#fs').value,qty,wa,method:'QRIS'};
+ await busy($('#fb'),async()=>{let o;try{o=await api.createOrder(body)}catch(er){if(er.message!=='NO_BACKEND'){ferr(er.message);toast('Order gagal','err');return}
+  o={id:'DRAFT-'+Date.now().toString(36).toUpperCase(),status_label:'Draft — belum dikirim ke server',local:true,created:Date.now()}}
+  o={...body,productName:p.name,total:p.price*qty,...o};save(o);showDone(o);toast(o.local?'Draft pesanan tersimpan di browser ini':'Pesanan dibuat','ok')})};
+function showDone(o){$('#of').hidden=true;const d=$('#done');d.hidden=false;
+ d.innerHTML=`<h3 style="margin:0 0 8px">${o.local?'Draft Pesanan':'Pesanan Dibuat'}</h3>
+ <div class="kv"><span class="mu">ID Pesanan</span><b>${esc(o.id)}</b></div><div class="kv"><span class="mu">Produk</span><b>${esc(o.productName)}</b></div><div class="kv"><span class="mu">Harga</span><b>${rp(o.total)}</b></div><div class="kv"><span class="mu">Status</span><span class="badge-s">${esc(o.status_label||o.status)}</span></div>
+ ${o.local?'<div class="note">Server pesanan/pembayaran belum terhubung, jadi pesanan ini belum diproses. Kirim detailnya ke admin dengan tombol di bawah.</div>':''}
+ <div class="row" style="margin-top:14px"><button class="btn pri" id="d1">CEK PESANAN</button>${o.local?'':'<button class="btn" id="d3">BAYAR</button>'}<button class="btn wa" id="d2">HUBUNGI ADMIN</button></div>`;
+ $('#d1').onclick=()=>{closeOrder();location.hash='#pesanan'};$('#d2').onclick=()=>waAdmin(orderMsg(o));if($('#d3'))$('#d3').onclick=()=>{curPay=o.id;closeOrder();location.hash='#pembayaran'}}
+
+/* ===== PESANAN ===== */
+const bs=o=>`<span class="badge-s ${o.paid?'paid':''}">${esc(o.status_label||o.status||'-')}</span>`;
+function renderOrders(){const a=store.get();$('#ol').innerHTML=a.map(o=>`<div class="glass box"><div class="kv"><b>${esc(o.id)}</b>${bs(o)}</div><div class="kv"><span>${esc(o.productName)} · ${esc(o.country)} · ${esc(o.service)} ×${o.qty}</span><b>${rp(o.total)}</b></div>${o.local?'':`<button class="btn" data-pay="${esc(o.id)}" style="margin-top:12px">💳 Pembayaran</button>`}</div>`).join('')||'<p class="mu">Belum ada pesanan di browser ini.</p>'}
+$('#ol').onclick=e=>{const b=e.target.closest('[data-pay]');if(b){curPay=b.dataset.pay;location.hash='#pembayaran'}};
+$('#ob').onclick=()=>busy($('#ob'),async()=>{const id=$('#oid').value.trim();if(!id)return toast('Masukkan ID pesanan.','err');
+ const l=store.get().find(x=>x.id===id);try{const o=await api.getOrder(id);save({...(l||{}),...o});renderOrders();toast('Pesanan ditemukan','ok')}catch(er){
+  if(er.message==='NO_BACKEND')toast(l?'Pesanan ada di daftar lokal di bawah (belum bisa dicek ke server).':'ID tidak ditemukan di browser ini. Server belum terhubung.',l?'info':'err');else toast(er.message,'err')}});
+
+/* ===== PEMBAYARAN ===== */
+let curPay=null,tm=null;
+const curOrder=()=>store.get().find(o=>o.id===curPay)||store.get().find(o=>!o.local)||store.get()[0];
+function renderPay(){const o=curOrder(),p=$('#pay');clearInterval(tm);if(!o){p.innerHTML='<div class="glass box"><p class="mu">Belum ada pesanan. Buat pesanan dari halaman Produk.</p></div>';return}curPay=o.id;
+ p.innerHTML=`<div class="glass box"><div class="kv"><span class="mu">ID</span><b>${esc(o.id)}</b></div><div class="kv"><span class="mu">Total pembayaran</span><b>${rp(o.total)}</b></div><div class="kv"><span class="mu">Status</span>${bs(o)}</div>
+ ${o.expires_at&&!o.paid?'<div class="cd" id="cd">--:--</div>':''}
+ <div class="qr">${o.qris_image?`<img alt="QRIS" src="${esc(o.qris_image)}">`:'QRIS dibuat oleh payment gateway di server. Belum tersedia untuk pesanan ini.'}</div>
+ ${o.local?'<div class="note">Pembayaran tidak bisa diproses karena server belum terhubung.</div>':''}
+ <button class="btn pri" id="pb" style="width:100%">SUDAH BAYAR / CEK PEMBAYARAN</button></div>`;
+ $('#pb').onclick=()=>busy($('#pb'),async()=>{try{const d=await api.payStatus(o.id);o.status_label=d.status_label||d.status;o.paid=d.status==='paid';save(o);renderPay();toast(o.paid?'Pembayaran terverifikasi server':'Status: '+o.status_label,o.paid?'ok':'info')}catch(er){toast(er.message==='NO_BACKEND'?'Server pembayaran belum terhubung, status tidak bisa diverifikasi.':er.message,'err')}});
+ if(o.expires_at&&!o.paid){const t=()=>{const s=Math.max(0,Math.floor((o.expires_at-Date.now())/1000)),c=$('#cd');if(!c)return clearInterval(tm);c.textContent=s?String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'):'Kedaluwarsa';if(!s)clearInterval(tm)};t();tm=setInterval(t,1000)}}
+
+/* ===== LOGIN ===== */
+$('#lb').onclick=()=>busy($('#lb'),async()=>{const er=$('#lerr');er.hidden=true;const email=$('#le').value.trim(),password=$('#lp').value;
+ if(!email||!password){er.textContent='Email dan password wajib diisi.';er.hidden=false;return}
+ try{await api.login({email,password});toast('Login berhasil','ok');location.href=CONFIG.ADMIN_URL}catch(x){er.textContent=x.message==='NO_BACKEND'?'Login membutuhkan backend. Belum terhubung.':x.message;er.hidden=false;toast('Login gagal','err')}});
+
+/* ===== STATUS, ANIMASI, INIT ===== */
+api.status().then(d=>{const s=$('#st');s.textContent=d.online?'● ONLINE':'● OFFLINE';s.className='pill '+(d.online?'on':'off')}).catch(e=>{$('#st').textContent=e.message==='NO_BACKEND'?'BELUM TERHUBUNG':'STATUS ERROR'});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+function observe(){$$('.rv:not(.in)').forEach(e=>io.observe(e))}
+renderProducts();route();addEventListener('load',()=>setTimeout(()=>$('#ld').classList.add('out'),350));
+</script>
+</body>
+</html>
